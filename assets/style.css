@@ -16,3 +16,8 @@ header {
     display: flex;
     justify-content: center;
 }
+
+.sidebar {
+    display: flex;
+    justify-content: flex-start;
+}
