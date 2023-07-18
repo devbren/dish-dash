@@ -1,0 +1,1 @@
+var navBarEl = document.getElementsByClassName("nav-bar")
