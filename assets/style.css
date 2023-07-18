@@ -1,8 +1,25 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: gray;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bolder
+}
+
+.nav-bar a {
+    color: black;
+}
+
+.nav-bar a:hover {
+    color :black;
 }
 
 .column {
@@ -18,13 +35,17 @@ header {
 .container {
     display: flex;
     justify-content: center;
-    background: url("dish-dash\assets\images\brooke-lark-wMzx2nBdeng-unsplash.jpg");
     display: flex;
-    background-size: cover;
     background-position: center;
     align-items: center;
     height: 900px;
+    opacity: 70%;
+}
 
+.hero-img {
+    background-image: url("./images/brooke-lark-wMzx2nBdeng-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -38,4 +59,27 @@ header h1 {
     margin: 10px;
     padding: 10px;
 
+}
+
+.about {
+    background-color: gray;
+    padding: 40px;
+    text-align: justify;
+}
+
+.contact {
+    padding: 40px;
+    background-color: lightgray;
+}
+
+.contact li {
+    list-style: none;
+    text-decoration: none;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background-color: black;
+    color: white;
 }
