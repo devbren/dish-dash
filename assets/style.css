@@ -68,7 +68,7 @@ header h1 {
 }
 
 .hero #granny {
-    margin-top: 30px;
+    margin-top: 60px;
     width: 200px;
     border-radius: 50%;
     border: 2px solid black;
@@ -78,6 +78,33 @@ header h1 {
 .card-text {
     display: flex;
     flex-direction: column;
+}
+
+.card-img-top {
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.card-body {
+    padding: 10px;
+
+}
+
+.meal-image {
+    height: 300px;
+    weight: 300px;
+    padding: 10px;
+}
+
+p {
+    
+}
+
+#btn {
+    margin-bottom: 80px;
 }
 
 header h1 {
@@ -114,3 +141,4 @@ footer {
     background-color: gray;
     color: black;
 }
+
