@@ -7,7 +7,9 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: gray;
-    position: fixed;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     width: 100%;
 
 }
@@ -42,7 +44,6 @@ header h1 {
     background-image: url("./images/brooke-lark-wMzx2nBdeng-unsplash.jpg");
     background-size: cover;
     background-position: center;
-    
 }
 
 
@@ -76,6 +77,7 @@ header h1 {
     width: 200px;
     border-radius: 50%;
     border: 2px solid black;
+    margin-top: 150px;
 }
 
 .hero input {
@@ -165,3 +167,37 @@ footer {
     color: black;
 }
 
+@media (max-width:500px) {
+    .meal-image {
+        height: 200px;
+        width: 200px;
+        /* padding: 10px; */
+    }
+}
+
+@media (max-width: 398px){
+
+    .meal-image {
+        height: 150px;
+        width: 150px;
+        /* padding: 10px;  */
+    }
+}
+
+@media (max-width: 460px){
+
+    header h1 {
+        font-size: 30px;
+        font-weight: bolder
+    }
+    
+}
+
+@media (max-width: 412px){
+
+    header h1 {
+        font-size: 20px;
+        font-weight: bolder
+    }
+    
+}
