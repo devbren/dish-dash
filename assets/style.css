@@ -7,6 +7,9 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: gray;
+    position: fixed;
+    width: 100%;
+
 }
 
 header h1 {
@@ -39,6 +42,7 @@ header h1 {
     background-image: url("./images/brooke-lark-wMzx2nBdeng-unsplash.jpg");
     background-size: cover;
     background-position: center;
+    
 }
 
 
@@ -80,6 +84,11 @@ header h1 {
     width: 200px;
 }
 
+.card {
+    margin: 10px;
+    color: white;
+}
+
 /* Figureout how to bullet these ingredients that show up on the box */
 .card-text {
     display: flex;
@@ -103,9 +112,17 @@ header h1 {
 
 }
 
+.card h5 {
+    font-weight: bolder !important;
+}
+
+.card ul li {
+    list-style-type: number;
+}
+
 .meal-image {
     height: 300px;
-    weight: 300px;
+    width: 300px;
     padding: 10px;
 }
 
@@ -120,7 +137,7 @@ header h1 {
 
 }
 
-.about {
+.about, .card {
     background-color: gray;
     padding: 40px;
     text-align: justify;
