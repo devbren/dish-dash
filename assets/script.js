@@ -5,28 +5,10 @@ var urlRequest = "https://www.themealdb.com/api/json/v1/1/search.php?s="
 // This variable below will display a result of the search in the hidden div found in the html code with the id of results
 var resultsBox = document.getElementById('results');
 
-
-// resultsBox.innerHTML = card;
-
-// var card = document.createElement("div");
-// card.classList.add("card");
-
-// var cardBody = document.createElement("div");
-// cardBody.classList.add("card-body");
-
-// var heading = document.createElement("h5");
-// cardBody.appendChild(heading);
-
-// var paragraph = document.createElement("p");
-// cardBody.appendChild(paragraph);
-
-// var list = document.createElement("ul")
-// cardBody.appendChild(list);
-
-// var listItems = document.createElement("li")
-// cardBody.appendChild(listItems);
-
+// This function below creates the card resulted from the user search for a recipe
 function createMealCard(meal) {
+
+    // These variables below will create a card that pops up with a header, an image, a link, and a list of ingredients that are connected to its designation in the API. 
     var card = document.createElement("div");
     card.classList.add("card");
 
@@ -41,6 +23,7 @@ function createMealCard(meal) {
     img.alt = meal.strMeal;
     img.classList.add("meal-image");
 
+    // This is the link to the youtube instruction video of how to cook the recipe
     var button = document.createElement("a");
     button.textContent = "How To Cook Recipe"
     button.setAttribute("target", "_blank")
@@ -54,8 +37,7 @@ function createMealCard(meal) {
     var li4 = document.createElement("li");
     var li5 = document.createElement("li");
 
-    
-
+    // This code below creates the content for each list item in the paragraph section of the card. As you can see, each list item is attached to specific ingredient located in the API. 
     li1.textContent = meal.strIngredient1;
     li2.textContent = meal.strIngredient2;
     li3.textContent = meal.strIngredient3;
@@ -94,6 +76,7 @@ function createMealCard(meal) {
 
 }
 
+// This function is tied to the button which allows the data fetched to be displayed once the search button is pressed.
 function Submit(event) {
     event.preventDefault();
     var userInput = formEl.value;
