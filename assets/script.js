@@ -1,5 +1,8 @@
+// This code below grabs the search bar and allows us to use in the javascript code
 var formEl = document.querySelector('#inputSearch')
+// This varibale below fetches data from the API
 var urlRequest = "https://www.themealdb.com/api/json/v1/1/search.php?s="
+// This variable below will display a result of the search in the hidden div found in the html code with the id of results
 var resultsBox = document.getElementById('results');
 
 
@@ -29,7 +32,7 @@ cardBody.appendChild(link);
 var button = document.createElement("a");
 cardBody.appendChild(button);
 button.textContent = "How To Cook Recipe"
-
+button.setAttribute("target", "_blank")
 
 card.appendChild(cardBody);
 
@@ -113,7 +116,7 @@ btn.addEventListener('click', Submit)
 
 
 
- 
+
 
 
 
