@@ -6,19 +6,19 @@ var urlRequest = "https://www.themealdb.com/api/json/v1/1/search.php?s="
 var resultsBox = document.getElementById('results');
 
 
-resultsBox.innerHTML = card;
+// resultsBox.innerHTML = card;
 
-var card = document.createElement("div");
-card.classList.add("card");
+// var card = document.createElement("div");
+// card.classList.add("card");
 
-var cardBody = document.createElement("div");
-cardBody.classList.add("card-body");
+// var cardBody = document.createElement("div");
+// cardBody.classList.add("card-body");
 
-var heading = document.createElement("h5");
-cardBody.appendChild(heading);
+// var heading = document.createElement("h5");
+// cardBody.appendChild(heading);
 
-var paragraph = document.createElement("p");
-cardBody.appendChild(paragraph);
+// var paragraph = document.createElement("p");
+// cardBody.appendChild(paragraph);
 
 // var list = document.createElement("ul")
 // cardBody.appendChild(list);
@@ -26,21 +26,9 @@ cardBody.appendChild(paragraph);
 // var listItems = document.createElement("li")
 // cardBody.appendChild(listItems);
 
-var link = document.createElement("a");
-cardBody.appendChild(link);
-
-var button = document.createElement("a");
-cardBody.appendChild(button);
-button.textContent = "How To Cook Recipe"
-button.setAttribute("target", "_blank")
-
-card.appendChild(cardBody);
-
-resultsBox.appendChild(card);
-
 function createMealCard(meal) {
     var card = document.createElement("div");
-    card.classList.add("Card");
+    card.classList.add("card");
 
     var cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
@@ -53,26 +41,54 @@ function createMealCard(meal) {
     img.alt = meal.strMeal;
     img.classList.add("meal-image");
 
+    var button = document.createElement("a");
+    button.textContent = "How To Cook Recipe"
+    button.setAttribute("target", "_blank")
+
     // Add a list of five ingredients within the paragraph element
     // This code below represents the small list of the first 5 ingredients from the API. 
-    var ingredients = document.createElement("p");
-    ingredients.textContent = meal.strIngredient1 + ', ';
-    ingredients.textContent += meal.strIngredient2 + ', ';
-    ingredients.textContent += meal.strIngredient3 + ', ';
-    ingredients.textContent += meal.strIngredient4 + ', ';
-    ingredients.textContent += meal.strIngredient5 + ', ';
-    console.log(meal);
+    var ingredients = document.createElement("ul");
+    var li1 = document.createElement("li");
+    var li2 = document.createElement("li");
+    var li3 = document.createElement("li");
+    var li4 = document.createElement("li");
+    var li5 = document.createElement("li");
+
+    
+
+    li1.textContent = meal.strIngredient1;
+    li2.textContent = meal.strIngredient2;
+    li3.textContent = meal.strIngredient3;
+    li4.textContent = meal.strIngredient4;
+    li5.textContent = meal.strIngredient5;
+
+    ingredients.appendChild(li1);
+    ingredients.appendChild(li2);
+    ingredients.appendChild(li3);
+    ingredients.appendChild(li4);
+    ingredients.appendChild(li5);
+    // ingredients.textContent = meal.strIngredient1 + ', ';
+    // ingredients.textContent += meal.strIngredient2 + ', ';
+    // ingredients.textContent += meal.strIngredient3 + ', ';
+    // ingredients.textContent += meal.strIngredient4 + ', ';
+    // ingredients.textContent += meal.strIngredient5 + ', ';
+    // console.log(meal);
     cardBody.appendChild(heading);
     cardBody.appendChild(img);
     cardBody.appendChild(ingredients);
 
+
     // TA Help 
     // This code allows users to click and access a how to video for the recipe
-    button.href = meal.strYoutube
+    button.href = meal.strYoutube;
+    console.log(meal.strYoutube);
+
+    // cardBody.appendChild(button);
 
     cardBody.appendChild(button);
-
     card.appendChild(cardBody);
+
+    
 
     return card;
 
