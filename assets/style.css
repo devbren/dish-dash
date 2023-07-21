@@ -57,7 +57,6 @@ header h1 {
 }
 
 .hero h1 {
-
     margin-top: 50px;
 }
 
@@ -67,17 +66,14 @@ header h1 {
 }
 
 .hero button {
-
     font-size: 20px;
-
 }
 
 .hero #granny {
-    margin-top: 60px;
     width: 200px;
     border-radius: 50%;
     border: 2px solid black;
-    margin-top: 150px;
+    margin-top: 60px;
 }
 
 .hero input {
