@@ -74,10 +74,20 @@ header h1 {
     border: 2px solid black;
 }
 
+.hero input {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
 /* Figureout how to bullet these ingredients that show up on the box */
 .card-text {
     display: flex;
     flex-direction: column;
+}
+
+.card-body {
+    text-align: center;
 }
 
 .card-img-top {
@@ -97,10 +107,6 @@ header h1 {
     height: 300px;
     weight: 300px;
     padding: 10px;
-}
-
-p {
-    
 }
 
 #btn {
