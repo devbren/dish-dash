@@ -115,7 +115,9 @@ header h1 {
 }
 
 .card ul li {
-    list-style-type: number;
+    list-style-type: none;
+    text-align: center;
+    margin-right: 30px;
 }
 
 .meal-image {
@@ -126,7 +128,7 @@ header h1 {
 
 #btn {
     margin-bottom: 80px;
-    
+
 }
 
 header h1 {
