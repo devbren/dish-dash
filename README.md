@@ -13,15 +13,15 @@ https://dev.to/github/how-to-host-your-first-site-for-free-on-github-pages-45ob
 
 ## Usage
 When you open this website, a landing page appears with a header that features several links 
-The only functional parts of this website are the three links in the headers nav bar.
-You may click on any and it will direct you to its corresponding section in the main section of the body. Each link is an important factor of the business and helps readers understand what Horiseon offers as a business to its clients. 
+Users are able to search for any receipt in any given moment. Once a recipe is chosen, users are prompted with a recipe image, ingredients, and a video link to learn how to cook the recipe from an instructional video. Furthermore, users are able to store their favorite recipes to local storage in the console log by clicking a save to favorites button. 
 
-![Alt text](assets/images/127.0.0.1_5501_index.html (1).png)
+![Alt text](assets/images/readmeproject.png)
 
 Link to repo:
 https://github.com/brennysouza/dish-dash
 
 Link to deployed site:
+https://brennysouza.github.io/dish-dash/
 
 
 ## Credits
@@ -38,6 +38,8 @@ https://github.com/brennysouza
 
 Luis Torillo
 https://github.com/Luistj03
+
+*Some code was supplied by TA's only as starting points to assist. 
 
 ## License
 Please refer to the LICENSE found in repo. 
