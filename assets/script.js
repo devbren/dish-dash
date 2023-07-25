@@ -37,6 +37,7 @@ function createMealCard(meal) {
     var li4 = document.createElement("li");
     var li5 = document.createElement("li");
 
+
     // This code below creates the content for each list item in the paragraph section of the card. As you can see, each list item is attached to specific ingredient located in the API. 
     li1.textContent = meal.strIngredient1;
     li2.textContent = meal.strIngredient2;
@@ -44,11 +45,20 @@ function createMealCard(meal) {
     li4.textContent = meal.strIngredient4;
     li5.textContent = meal.strIngredient5;
 
+
     ingredients.appendChild(li1);
     ingredients.appendChild(li2);
     ingredients.appendChild(li3);
     ingredients.appendChild(li4);
     ingredients.appendChild(li5);
+
+    var saveButton = document.createElement("button");
+    saveButton.textContent = "Save to Favorites";
+    saveButton.classList.add("btn", "btn-primary");
+    saveButton.addEventListener('click', function () {
+        saveRecipeToFavorites(meal);
+    });
+
     // ingredients.textContent = meal.strIngredient1 + ', ';
     // ingredients.textContent += meal.strIngredient2 + ', ';
     // ingredients.textContent += meal.strIngredient3 + ', ';
@@ -58,12 +68,13 @@ function createMealCard(meal) {
     cardBody.appendChild(heading);
     cardBody.appendChild(img);
     cardBody.appendChild(ingredients);
+    cardBody.appendChild(saveButton);
 
 
     // TA Help 
     // This code allows users to click and access a how to video for the recipe
     button.href = meal.strYoutube;
-    button.classList.add("btn", "btn-primary", "mb-5" )
+    button.classList.add("btn", "btn-primary", "mb-5")
     console.log(meal.strYoutube);
 
     // cardBody.appendChild(button);
@@ -99,6 +110,18 @@ function Submit(event) {
                 resultsBox.classList.remove('hidden');
             }
         });
+}
+
+
+function saveRecipeToFavorites(recipe) {
+    // Check if favorites list exists in local storage
+    let favoritesList = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    // Check if the recipe is already in favorites
+    if (!favoritesList.some(item => item.idMeal === recipe.idMeal)) {
+        favoritesList.push(recipe);
+        localStorage.setItem('favorites', JSON.stringify(favoritesList));
+    }
 }
 
 btn.addEventListener('click', Submit)

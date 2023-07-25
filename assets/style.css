@@ -85,6 +85,7 @@ header h1 {
     margin: 10px;
     color: white;
     width: 600px;
+    position: relative;
 }
 
 /* Figureout how to bullet these ingredients that show up on the box */
@@ -107,6 +108,7 @@ header h1 {
 
 .card-body {
     padding: 10px;
+    text-align: center;
 
 }
 
@@ -114,10 +116,18 @@ header h1 {
     font-weight: bolder !important;
 }
 
-.card ul li {
+.card ul {
+
+    padding: 0;
+    list-style: none; 
+    display: flex; 
+    justify-content: center;
+}
+
+.card ul li  {
     list-style-type: none;
-    text-align: center;
     margin-right: 30px;
+    margin: 10px;
 }
 
 .meal-image {
@@ -130,6 +140,8 @@ header h1 {
     margin-bottom: 80px;
 
 }
+
+
 
 header h1 {
 
