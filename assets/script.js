@@ -69,7 +69,18 @@ function createMealCard(meal) {
     cardBody.appendChild(img);
     cardBody.appendChild(ingredients);
     cardBody.appendChild(saveButton);
+    
+    var cardButtons = document.createElement("div");
+    cardButtons.classList.add("card-buttons");
+    cardButtons.appendChild(button);
+    cardButtons.appendChild(saveButton);
 
+    cardBody.appendChild(heading);
+    cardBody.appendChild(img);
+    cardBody.appendChild(ingredients);
+    cardBody.appendChild(cardButtons); 
+
+    card.appendChild(cardBody);
 
     // TA Help 
     // This code allows users to click and access a how to video for the recipe
