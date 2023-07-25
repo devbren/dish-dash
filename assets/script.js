@@ -24,7 +24,7 @@ function createMealCard(meal) {
     img.classList.add("meal-image");
 
     // This is the link to the youtube instruction video of how to cook the recipe
-    var button = document.createElement("a");
+    var button = document.createElement("button");
     button.textContent = "How To Cook Recipe"
     button.setAttribute("target", "_blank")
 
@@ -63,14 +63,13 @@ function createMealCard(meal) {
     // TA Help 
     // This code allows users to click and access a how to video for the recipe
     button.href = meal.strYoutube;
+    button.classList.add("btn", "btn-primary", "mb-5" )
     console.log(meal.strYoutube);
 
     // cardBody.appendChild(button);
 
     cardBody.appendChild(button);
     card.appendChild(cardBody);
-
-    
 
     return card;
 
@@ -80,11 +79,11 @@ function createMealCard(meal) {
 function Submit(event) {
     event.preventDefault();
     var userInput = formEl.value;
-// if statement goes here so that recipe wont populate without input (TA help)
-// This if statement allows nothing to fetch and show up in case users accidentally hit search without any input. 
-if (userInput === "") {
-    return false;
-}
+    // if statement goes here so that recipe wont populate without input (TA help)
+    // This if statement allows nothing to fetch and show up in case users accidentally hit search without any input. 
+    if (userInput === "") {
+        return false;
+    }
     fetch(urlRequest + userInput)
         .then(function (data) {
             return data.json();
