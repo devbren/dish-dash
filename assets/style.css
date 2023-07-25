@@ -84,6 +84,7 @@ header h1 {
 .card {
     margin: 10px;
     color: white;
+    width: 600px;
 }
 
 /* Figureout how to bullet these ingredients that show up on the box */
@@ -125,6 +126,7 @@ header h1 {
 
 #btn {
     margin-bottom: 80px;
+    
 }
 
 header h1 {
@@ -164,6 +166,9 @@ footer {
 }
 
 @media (max-width:500px) {
+
+
+
     .meal-image {
         height: 200px;
         width: 200px;

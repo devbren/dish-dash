@@ -24,7 +24,7 @@ function createMealCard(meal) {
     img.classList.add("meal-image");
 
     // This is the link to the youtube instruction video of how to cook the recipe
-    var button = document.createElement("a");
+    var button = document.createElement("button");
     button.textContent = "How To Cook Recipe"
     button.setAttribute("target", "_blank")
 
