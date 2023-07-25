@@ -88,10 +88,12 @@ header h1 {
     position: relative;
 }
 
-/* Figureout how to bullet these ingredients that show up on the box */
 .card-text {
+
     display: flex;
     flex-direction: column;
+    align-items: center;
+
 }
 
 .card-body {
@@ -107,7 +109,6 @@ header h1 {
 }
 
 .card-body {
-    padding: 10px;
     text-align: center;
 
 }
@@ -119,14 +120,23 @@ header h1 {
 .card ul {
 
     padding: 0;
-    list-style: none; 
-    display: flex; 
+    list-style: none;
+    display: flex;
     justify-content: center;
+
 }
 
-.card ul li  {
+.card ul li {
     list-style-type: none;
     margin-right: 30px;
+    margin: 10px;
+
+}
+
+.card-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 10px;
 }
 
@@ -138,10 +148,12 @@ header h1 {
 
 #btn {
     margin-bottom: 80px;
+    display: flex;
+
+    justify-content: center;
+
 
 }
-
-
 
 header h1 {
 
@@ -179,23 +191,23 @@ footer {
     color: black;
 }
 
-@media (max-width:500px) {
+@media (max-width:500px) {}
 
 
 
-    .meal-image {
-        height: 200px;
-        width: 200px;
-        /* padding: 10px; */
-    }
+.meal-image {
+    height: 200px;
+    width: 200px;
+    padding: 10px;
 }
+
 
 @media (max-width: 398px) {
 
     .meal-image {
         height: 150px;
         width: 150px;
-        /* padding: 10px;  */
+        padding: 10px;
     }
 }
 
